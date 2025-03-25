@@ -89,10 +89,8 @@ def sortLeaderboard():
                 'raw': entry
             })
         
-        # Sort by username (case-insensitive)
         leaderboard.sort(key=lambda x: x['username'].lower())
         
-        # Write sorted entries back to file
         with open("Leaderboard.txt", "w") as file:
             for entry in leaderboard:
                 file.write(entry['raw'] + "\n")
